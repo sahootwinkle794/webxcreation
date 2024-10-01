@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+.carousel-container {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  will-change: transform;
+}
+
+.card-hover {
+  flex: 0 0 auto;
+  width: 410px;
+  height: 500px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 32px -10px rgb(8, 96, 168);
+  transition: transform 0.35s ease-in-out;
+}
+
+.card-hover:hover .card-hover__content:hover {
+  background: linear-gradient(137deg, #02c9b5, #0048ff);
+  transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+}
+
+.card-hover__content {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(137deg, #0048ff, #02c9b5);
+  padding: 0 15px 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: all 0.35s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+  z-index: 1;
+}
+
+.card-hover__content::before, 
+.card-hover__content::after {
+  content: "";
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(48deg, #0048ff, #02c9b5);
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.card-hover__content:hover::before{
+  background: linear-gradient(45deg, #02c9b5, #0048ff);
+}
+.card-hover__content:hover::after{
+  background: linear-gradient(45deg, #02c9b5, #0048ff);
+}
+
+.card-hover__content::before {
+  top: -80px;
+  clip-path: ellipse(60% 80px at bottom center);
+}
+
+.card-hover__content::after {
+  bottom: -80px;
+  clip-path: ellipse(60% 80px at top center);
+}
+
+.card-hover__title {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.card-hover__text {
+  font-size: 15px;
+  color: #fff;
+}
+
+.card-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #084679a1;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+#lottie-animation {
+  width: 100%;  /* Make the Lottie animation container take up the full width of the parent */
+  height: 100%; /* Make the Lottie animation container take up the full height of the parent */
+  max-width: 100%; /* Ensure the container doesn't exceed the parent width */
+  max-height: 140%; /* Ensure the container doesn't exceed the parent height */
+  overflow: hidden; /* Prevent any overflow */
+}
+
+#lottie-animation svg {
+  width: 140%;
+  height: 140%;
+  object-fit: contain; /* Ensure the Lottie animation scales properly */
+}

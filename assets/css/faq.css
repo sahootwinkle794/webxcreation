@@ -1,0 +1,64 @@
+
+.faq_card {
+    background: #bad7f5b5 !important;
+    color: #333;
+    width: 100%;
+    max-width: 120rem;
+    min-height: 30rem;
+    border-radius: 2rem;
+}
+
+.faq_card:hover .img {
+    filter: drop-shadow(0rem 2.5rem rgba(0,0,0,0.1));
+}
+
+.acc-container {
+    padding: 4rem 2rem;
+}
+.acc-btn {
+    width: 100%;
+    padding: 1.6rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: inherit;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: all 0.5s linear;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.acc-btn:after {
+    content: "\27A4";
+    color: #fa8d0c;
+    float: right;
+    transition: all 0.3s linear;
+}
+.acc-btn.is-open:after {
+    transform: rotate(90deg);
+}
+.acc-btn:hover, .acc-btn.is-open {
+    color: #000;
+    font-weight: bold;
+    background-color: white;
+}
+
+.acc-content {
+    max-height: 0;
+    color: rgba(0,0,0,0.75);
+    font-size: 1rem;
+    margin: 0 2rem;
+    padding-top: 20px;
+    padding-left: 1rem;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.credit {
+    text-align: center;
+    padding: 1rem;
+}
+.credit a {
+    text-decoration: wavy underline;
+    color: dodgerblue;
+}
